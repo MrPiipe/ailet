@@ -14,10 +14,10 @@ import { routing }        from './app.routing';
 import { AlertComponent } from './_alert/index';
 import { AuthGuard } from './_auth/index';
 import { AlertService, AuthenticationService, UserService } from './_services/index';
-import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { DashboardComponent } from './dashboard/index';
+import { StatisticsComponent } from './statistics/index';
 
 @NgModule({
   imports: [
@@ -29,10 +29,10 @@ import { DashboardComponent } from './dashboard/index';
   declarations: [
     AppComponent,
     AlertComponent,
-    HomeComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    StatisticsComponent
   ],
   providers: [
     AuthGuard,
