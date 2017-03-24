@@ -30,6 +30,20 @@ export type StoreType = {
   disposeOldHosts: () => void
 };
 
+import { AuthService } from './shared/services/auth.service';
+
+export interface AppConfig {
+  BASE_URL: string,
+  APP_ID: string,
+  APP_SECRET: string
+}
+
+export const APPCONFIG: AppConfig = {
+  BASE_URL: 'https://ailet-api.selfbits.io',
+  APP_ID: '1583f012cef5e9396699e68bd9b043b3',
+  APP_SECRET: 'b323ef618216327cfd77c75aa7d07f2c',
+};
+
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
@@ -50,7 +64,9 @@ export type StoreType = {
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    AuthService,
+    { provide: 'APP_CONFIG_TOKEN', useValue: APPCONFIG }
   ]
 })
 
