@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
 import { TreeModule } from 'ng2-tree';
 
-import { routing }       from './components.routing';
-import { Components } from './components.component';
-import { TreeView } from './components/treeView/treeView.component';
+import { routing }       from './ailet.routing';
+import { Ailet } from './ailet.component';
+import { TreeView } from './ailet/treeView/treeView.component';
 
 @NgModule({
   imports: [
@@ -17,8 +17,8 @@ import { TreeView } from './components/treeView/treeView.component';
     routing
   ],
   declarations: [
-    Components,
+    Ailet,
     TreeView,
   ]
 })
-export class ComponentsModule {}
+export class AiletModule { }

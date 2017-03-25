@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'components',
+  selector: 'ailet',
   template: `<router-outlet></router-outlet>`
 })
-export class Components {
+export class Ailet {
 
   constructor() {
   }

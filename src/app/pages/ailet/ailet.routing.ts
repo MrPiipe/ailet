@@ -1,15 +1,15 @@
 import { Routes, RouterModule }  from '@angular/router';
 
-import { Charts } from './charts.component';
-import { ChartistJs } from './components/chartistJs/chartistJs.component';
+import { Ailet } from './ailet.component';
+import { TreeView } from './components/treeView/treeView.component';
 
 // noinspection TypeScriptValidateTypes
 const routes: Routes = [
   {
     path: '',
-    component: Charts,
+    component: ailet,
     children: [
-      { path: 'chartist-js', component: ChartistJs }
+      { path: 'treeview', component: TreeView }
     ]
   }
 ];

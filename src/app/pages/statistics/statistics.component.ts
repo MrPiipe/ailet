@@ -4,7 +4,7 @@ import {Component} from '@angular/core';
   selector: 'maps',
   template: `<router-outlet></router-outlet>`
 })
-export class Charts {
+export class Statistics {
 
   constructor() {
   }
