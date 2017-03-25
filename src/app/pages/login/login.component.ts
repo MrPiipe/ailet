@@ -15,6 +15,8 @@ export class Login {
   public email: AbstractControl;
   public password: AbstractControl;
   public submitted: boolean = false;
+  public error: boolean = false;
+  public errorMessage: string = '';
 
   constructor(fb: FormBuilder, private auth: AuthService, private router: Router) {
     this.form = fb.group({
@@ -29,10 +31,16 @@ export class Login {
   public onSubmit(values: any): void {
     this.submitted = true;
     if (this.form.valid) {
-      this.auth.login({ email: values.email, password: values.password }).subscribe(res => console.log(res);
-      if (res.status === 200) {
-        this.router.navigate(['pages']);
-      }
-    })
+      this.auth.login({ email: values.email, password: values.password }).subscribe(res => {
+        console.log(res);
+        if (res.status === 200) {
+          this.router.navigate(['pages']);
+        }
+      }, err => {
+        this.error = true;
+        this.errorMessage = err.json().message;
+      })
+    }
   }
+
 }
