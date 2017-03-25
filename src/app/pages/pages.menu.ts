@@ -73,7 +73,7 @@ export const PAGES_MENU = [
             }
           },
           {
-            path: 'chartist-js',
+            path: 'numbers',
             data: {
               menu: {
                 title: 'Numbers',

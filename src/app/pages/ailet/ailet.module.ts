@@ -4,21 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { NgaModule } from '../../theme/nga.module';
 import { TreeModule } from 'ng2-tree';
 
-import { routing }       from './ailet.routing';
+//import { routing }       from './ailet.routing';
 import { Ailet } from './ailet.component';
-import { TreeView } from './ailet/treeView/treeView.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    NgaModule,
-    TreeModule,
-    routing
+    NgaModule//,
+    //routing
   ],
   declarations: [
-    Ailet,
-    TreeView,
+    Ailet
   ]
 })
 export class AiletModule { }
