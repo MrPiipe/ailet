@@ -84,8 +84,8 @@ export class ChartistJsService {
       height: '300px',
       stackBars: true,
       axisX: {
-        labelInterpolationFnc: function (value) {
-          return value.split(/\s+/).map(function (word) {
+        labelInterpolationFnc: function(value) {
+          return value.split(/\s+/).map(function(word) {
             return word[0];
           }).join('');
         }
@@ -125,7 +125,7 @@ export class ChartistJsService {
       height: '300px',
       stackBars: true,
       axisY: {
-        labelInterpolationFnc: function (value) {
+        labelInterpolationFnc: function(value) {
           return (value / 1000) + 'k';
         }
       }
@@ -137,7 +137,7 @@ export class ChartistJsService {
       fullWidth: true,
       height: '300px',
       weight: '300px',
-      labelInterpolationFnc: function (value) {
+      labelInterpolationFnc: function(value) {
         return Math.round(value / 12 * 100) + '%';
       }
     },
@@ -150,7 +150,7 @@ export class ChartistJsService {
       height: '300px',
       weight: '300px',
       labelDirection: 'explode',
-      labelInterpolationFnc: function (value) {
+      labelInterpolationFnc: function(value) {
         return value[0];
       }
     },
@@ -164,13 +164,13 @@ export class ChartistJsService {
       height: '300px',
       weight: '300px',
       labelDirection: 'explode',
-      labelInterpolationFnc: function (value) {
+      labelInterpolationFnc: function(value) {
         return value[0];
       }
     }
   };
 
-  constructor(private _baConfig:BaThemeConfigProvider) {
+  constructor(private _baConfig: BaThemeConfigProvider) {
   }
 
   public getAll() {
@@ -183,7 +183,7 @@ export class ChartistJsService {
         chartPadding: padding,
         labelOffset: offset,
         labelDirection: 'explode',
-        labelInterpolationFnc: function (value) {
+        labelInterpolationFnc: function(value) {
           return value;
         }
       }],
@@ -191,14 +191,14 @@ export class ChartistJsService {
         chartPadding: padding,
         labelOffset: offset,
         labelDirection: 'explode',
-        labelInterpolationFnc: function (value) {
+        labelInterpolationFnc: function(value) {
           return value;
         }
       }],
       ['screen and (max-width: 600px)', {
         chartPadding: 0,
         labelOffset: 0,
-        labelInterpolationFnc: function (value) {
+        labelInterpolationFnc: function(value) {
           return value[0];
         }
       }]

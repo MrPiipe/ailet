@@ -25,8 +25,8 @@ const ngcWebpack = require('ngc-webpack');
 const HMR = helpers.hasProcessFlag('hot');
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
-  title: 'ng2-admin - Angular 2 Admin Template',
-  description: 'Free Angular 2 and Bootstrap 4 Admin Template',
+  title: 'Ailet Dashboard',
+  description: 'Ailet Dashboard extended from ng2-admin Dashboard',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
@@ -36,7 +36,7 @@ const METADATA = {
  *
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
-module.exports = function (options) {
+module.exports = function(options) {
   isProd = options.env === 'production';
   return {
 
@@ -59,7 +59,7 @@ module.exports = function (options) {
 
       'polyfills': './src/polyfills.browser.ts',
       'vendor': './src/vendor.browser.ts',
-      'main':      AOT ? './src/main.browser.aot.ts' : './src/main.browser.ts'
+      'main': AOT ? './src/main.browser.aot.ts' : './src/main.browser.ts'
     },
 
     /*
@@ -105,8 +105,7 @@ module.exports = function (options) {
          */
         {
           test: /\.ts$/,
-          use: [
-            {
+          use: [{
               loader: '@angularclass/hmr-loader',
               options: {
                 pretty: !isProd,
@@ -208,7 +207,10 @@ module.exports = function (options) {
      * See: http://webpack.github.io/docs/configuration.html#plugins
      */
     plugins: [
-      new ExtractTextPlugin({filename: 'initial.css', allChunks: true}),
+      new ExtractTextPlugin({
+        filename: 'initial.css',
+        allChunks: true
+      }),
 
       new AssetsPlugin({
         path: helpers.root('dist'),
@@ -268,9 +270,13 @@ module.exports = function (options) {
        *
        * See: https://www.npmjs.com/package/copy-webpack-plugin
        */
-      new CopyWebpackPlugin([
-        {from: 'src/assets', to: 'assets'},
-        {from: 'src/meta'}
+      new CopyWebpackPlugin([{
+          from: 'src/assets',
+          to: 'assets'
+        },
+        {
+          from: 'src/meta'
+        }
       ]),
 
       /*

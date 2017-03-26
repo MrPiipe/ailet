@@ -541,7 +541,8 @@ export class BasicTablesService {
   metricsTableData = [
     {
       image: 'app/browsers/chrome.svg',
-      browser: 'Google Chrome',
+      ailet: 'Cuarto Ana',
+      ailet_id: '0001',
       visits: '10,392',
       isVisitsUp: true,
       purchases: '4,214',
@@ -551,43 +552,25 @@ export class BasicTablesService {
     },
     {
       image: 'app/browsers/firefox.svg',
-      browser: 'Mozilla Firefox',
+      ailet: 'Cuarto Principal',
+      ailet_id: '0005',
       visits: '7,873',
       isVisitsUp: true,
       purchases: '3,031',
-      isPurchasesUp: false,
+      isPurchasesUp: true,
       percent: '28%',
       isPercentUp: true
     },
     {
       image: 'app/browsers/ie.svg',
-      browser: 'Internet Explorer',
+      ailet: 'Cocina',
+      ailet_id: '0027',
       visits: '5,890',
-      isVisitsUp: false,
-      purchases: '2,102',
-      isPurchasesUp: false,
-      percent: '17%',
-      isPercentUp: false
-    },
-    {
-      image: 'app/browsers/safari.svg',
-      browser: 'Safari',
-      visits: '4,001',
-      isVisitsUp: false,
-      purchases: '1,001',
-      isPurchasesUp: false,
-      percent: '14%',
-      isPercentUp: true
-    },
-    {
-      image: 'app/browsers/opera.svg',
-      browser: 'Opera',
-      visits: '1,833',
       isVisitsUp: true,
-      purchases: '83',
+      purchases: '2,102',
       isPurchasesUp: true,
-      percent: '5%',
-      isPercentUp: false
+      percent: '17%',
+      isPercentUp: true
     }
   ];
 
